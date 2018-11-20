@@ -1,0 +1,36 @@
+<ion-content padding>
+    <div class="red">
+      <div class="logo">
+        <img src="/assets/imgs/0e98382e245122cce0cd4dc5c831e4cf.png" alt="">
+        <span><div class="titleipet">iPet</div></span>
+      </div>
+    
+      <ion-list no-lines>
+        <ion-item>
+          <ion-input type="text" placeholder="E-mail"[(ngModel)]="login"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" placeholder="Senha" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </ion-list>
+    
+      <ion-grid>
+        <ion-row>
+          <button ion-button color="secondary" block round (click)="abrirTabs()">
+            Efetuar Login
+          </button>
+        </ion-row>
+        <ion-row>
+          <button ion-button block outline round color="secondary" (click)="abrirCadastro()">
+            Cadastrar-se
+          </button>
+        </ion-row>
+      </ion-grid>
+      <a style="color: rgba(5, 236, 75, 0.753); text-align: center;" (click)= "esqueciSenha()">Esqueci a senha ..</a>
+      <p style="text-align: center; color: rgb(255, 4, 4);">{{alertAviso}}</p>
+    </div>
+  
+  </ion-content>
+  
+  
+  

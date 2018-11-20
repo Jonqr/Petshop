@@ -1,0 +1,34 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Petshops</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="centro">
+    <img src="../../assets/icon/cat.png" class="efect" id="cat" (click)="infoPet(2)" >
+    <img src="../../assets/icon/dog.png" class="efect"  id="dog" (click)="infoPet(1)" >
+
+  </div>
+  
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-list>
+  
+  <button (click)="pageservice(item.id)" ion-item *ngFor="let item of items"  >
+    <ion-thumbnail item-start>
+      <img src="../../assets/imgs/pt.png">
+    </ion-thumbnail>
+    <h2>{{item.nome}}</h2>
+    <p> {{item.endereco.logradouro}} {{item.endereco.numero}}</p>
+
+  </button>
+
+</ion-list>
+
+  <div #map id="map"></div>
+</ion-content>
